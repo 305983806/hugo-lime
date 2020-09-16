@@ -19,9 +19,16 @@
 	{{ end }}
 	{{ if .Params.description }}
 	<meta name="og:description" content="{{ .Params.description }}"/>
-	{{ end }}
-	<meta name="og:site_name" content="{{ .Site.Title }}"/>
-		
+  {{ end }}
+  <meta name="og:site_name" content="{{ .Site.Title }}"/>
+  
+    <!-- seo -->
+    {{ if .Site.Params.keywords }}
+    <meta name="keywords" content="{{ .Site.Params.keywords }}"/>
+    {{ end }}
+    {{ if .Site.Params.description }}
+    <meta name="description" content="{{ .Site.Params.description }}"/>
+    {{ end }}
 
     <!-- including bootstrap -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
